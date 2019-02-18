@@ -8,5 +8,46 @@
 </head>
 <body>
     
+    <script>
+        // Array sorteren 
+        var getallen = [8, 10, 25, 3];
+        var fruit = ["banaan", "framboos", "peer", "appel"];
+        // (automatisch alfabetisch)
+        // fruit.sort();
+        // console.log(fruit);
+
+        // de functie vergelijkt twee zaken
+        // getallen.sort(fuction(a, b) {
+        //     if (a < b){
+        //         return 1;
+        //     } else {
+        //         return -1;
+        //     }
+        // };);
+
+        //  verschil tussen splice en slice
+        var fruit1 = ["banaan", "framboos", "peer", "appel"];
+        var fruit2 = ["banaan", "framboos", "peer", "appel"];
+        var nieuwFruit1 = fruit1.slice(1,2);
+            // slice (vanIndex, tot) NIET TOT EN MET
+            //  laat oude array zo en geeft je nieuwe
+
+        var nieuwFruit2 = fruit2.splice(1,2);
+            // splice(van Index, lengte)
+            // bewerkt oude array en geeft je nieuwe
+            console.log(nieuwFruit1, nieuwFruit2);
+
+        // Objects: lijst van gerelateerde data, objecten, arrays, booleans, enz...
+        
+        for (var i = 0; i < 10; i++) {
+            console.log("The number is " + i);
+        };
+        // OF
+        var i = 0;
+        while (i < 9){
+            i++;
+            console.log("The number is " + i);
+        }
+    </script>
 </body>
 </html>

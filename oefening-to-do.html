@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oefening To Do</title>
+</head>
+<body>
+    <h1>To Do Oefening</h1>
+
+    <p>Title<br>
+        <input type="text" id="titleInput">
+    </p>
+
+    <p>Todo<br>
+        <textarea name="todoInput" id="todoInput" cols="30" rows="10"></textarea>
+    </p> 
+    <button id="addButton" onclick="toevoegen();">Toevoegen</button> 
+    
+    <ul id="list">
+    </ul>
+
+    <script>
+    var titleInput = document.querySelector("#titleInput");
+    var todoInput = document.querySelector("#todoInput");
+    var listPrint = document.querySelector("#list");
+    var list = [{
+        title: "Vuilbak buiten",
+        description: "Groen vuilbak buiten zetten"
+    }, {
+        title: "Tuin",
+        description: "Gras afrijden"
+    }];
+    
+    printList(); 
+
+    function printList(){
+        var listItem = "";
+        for (var i = 0; i < list.length; i++){
+            listItem += "<li><strong>" + list[i].title + "</strong> " + list[i].description + "</li>";
+        }
+        listPrint.innerHTML = listItem;   
+    };
+
+    function toevoegen(){
+        var newTitle = titleInput.value;
+        var newTodo = todoInput.value;
+        list.push({title: newTitle, description: newTodo});
+        printList();
+    };
+     
+
+   
+    </script>
+
+</body>
+</html>
